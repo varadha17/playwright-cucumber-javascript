@@ -1,0 +1,54 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;hello",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "hello",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 260487699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am the user",
+            "match": {
+              "location": "features\\stepDefinition\\login.spec.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1658858399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 9550500,
+              "error_message": "page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://www.google.com/\", waiting until \"load\"\u001b[22m\n\n    at loginPage.init (C:\\Users\\akash\\Desktop\\Playwright_automation\\features\\support\\helper.js:15:15)\n    at async helper.<anonymous> (C:\\Users\\akash\\Desktop\\Playwright_automation\\features\\stepDefinition\\login.spec.js:10:3)"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]
