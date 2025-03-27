@@ -34,6 +34,12 @@ export default defineConfig({
   },
 
   /* Configure projects for major browsers */
+  projects: [
+    {
+      name: 'Cucumber Tests',
+      testMatch: '**/*.feature',
+    }
+  ]
   // projects: [
   //   {
   //     name: 'chromium',
