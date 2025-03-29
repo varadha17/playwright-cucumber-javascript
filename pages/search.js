@@ -11,6 +11,12 @@ class search extends helper{
         return await this.page.textContent("//div[text()='Products']")
     }
 
+    async clickProduct(){
+        //await this.getAllTextContent('Sauce Labs Onesie')
+        await this.getAllTextContent('Sauce Labs Onesie')
+        //await this.pageRefresh();
+        await this.moveBackward();
+    }
 
 }
 

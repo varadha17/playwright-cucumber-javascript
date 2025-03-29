@@ -6,4 +6,5 @@ const search = require("../../pages/search");
         await this.searchpage.page.waitForTimeout(4000)
         const titles = await this.searchpage.getTitleforPage(); 
         console.log(titles)
+        await this.searchpage.clickProduct();
     });
