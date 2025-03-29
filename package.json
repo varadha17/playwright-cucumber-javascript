@@ -10,7 +10,7 @@
   "devDependencies": {
     "@babel/register": "^7.25.9",
     "@cucumber/cucumber": "^11.2.0",
-    "@playwright/test": "^1.50.1",
+    "@playwright/test": "^1.51.1",
     "@types/node": "^22.13.9",
     "allure-commandline": "^2.33.0",
     "allure-cucumberjs": "^3.2.0",

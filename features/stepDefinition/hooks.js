@@ -4,7 +4,7 @@ const { chromium } = require('playwright');
 
 Before(async function()  {
         global.browser  = await chromium.launch({
-            headless: true
+            headless: false
         });
         this.context  = await global.browser.newContext();
         this.page = await this.context.newPage();
