@@ -4,6 +4,15 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Choose tags'
+        required: true
+        type: choice
+        options:
+          - login
+          - search
 jobs:
   test:
     timeout-minutes: 60
@@ -18,11 +27,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright Cucumber Tests
-      if: ${{ github.event.inputs.tags == '' }}
       run: npx cucumber-js --config=playwright.config.js
-    - name: Run Playwright Cucumber Tests with tags
-      if: ${{ github.event.inputs.tags != '' }}
-      run: npx cucumber-js --config=playwright.config.js --tags "${{ github.event.inputs.tags }}"
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
