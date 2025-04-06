@@ -33,9 +33,14 @@ jobs:
           allure generate allure-results -o allure-report --clean
     - name: Publish Allure Report
       if: always()
-      uses: actions/upload-artifact@v4
-      #if: ${{ !cancelled() }}
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        name: allure-report
-        path: allure-report/
-        retention-days: 30
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./allure-report
+      #uses: actions/upload-artifact@v4
+      #if: ${{ !cancelled() }}
+      #with:
+        #name: allure-report
+        #path: allure-report/
+        #retention-days: 30
