@@ -1,6 +1,7 @@
 // features/support/hooks.js
 const { Before, After } = require('@cucumber/cucumber');
 const { chromium } = require('playwright');
+require('dotenv').config();
 
 Before(async function()  {
         global.browser  = await chromium.launch({
@@ -8,7 +9,7 @@ Before(async function()  {
         });
         this.context  = await global.browser.newContext();
         this.page = await this.context.newPage();
-        this.page.goto("https://www.saucedemo.com/v1/")
+        this.page.goto(process.env.url)
 });
 
 After(async function(){
