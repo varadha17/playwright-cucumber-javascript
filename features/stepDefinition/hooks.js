@@ -9,7 +9,7 @@ Before(async function()  {
         });
         this.context  = await global.browser.newContext();
         this.page = await this.context.newPage();
-        this.page.goto(process.env.url)
+        this.page.goto(process.env.BASE_URL)
 });
 
 After(async function(){
