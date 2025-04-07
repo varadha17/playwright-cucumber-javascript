@@ -28,6 +28,8 @@ jobs:
       if: contains(github.event.head_commit.message, '[search]')
       run: |
         npx cucumber-js --config=playwright.config.js --tags='@search'
+      env:
+          BASE_URL: ${{secrets.BASE_URL}}
     - name: Generate Allure Report
       if: always()
       run: |
